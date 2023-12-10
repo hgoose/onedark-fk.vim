@@ -1,11 +1,11 @@
-" [onedark.vim](https://github.com/joshdick/onedark.vim/)
+" [onedark-fk.vim](https://github.com/joshdick/onedark-fk.vim/)
 
 " This is a [lightline.vim](https://github.com/itchyny/lightline.vim) colorscheme for use with
-" the [onedark.vim](https://github.com/joshdick/onedark.vim) colorscheme.
+" the [onedark-fk.vim](https://github.com/joshdick/onedark-fk.vim) colorscheme.
 
-let s:colors = onedark#GetColors()
+let s:colors = onedark-fk#GetColors()
 
-if get(g:, 'onedark_termcolors', 256) == 16
+if get(g:, 'onedark-fk_termcolors', 256) == 16
   let s:term_red = s:colors.red.cterm16
   let s:term_green = s:colors.green.cterm16
   let s:term_yellow = s:colors.yellow.cterm16
@@ -54,5 +54,5 @@ let s:p.tabline.right = [ [ s:white, s:visual_grey ] ]
 let s:p.normal.error = [ [ s:cursor_grey, s:red ] ]
 let s:p.normal.warning = [ [ s:cursor_grey, s:yellow ] ]
 
-let g:lightline#colorscheme#onedark#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#onedark-fk#palette = lightline#colorscheme#flatten(s:p)
 
