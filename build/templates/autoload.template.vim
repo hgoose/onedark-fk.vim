@@ -1,6 +1,6 @@
-" [onedark-fk.vim](https://github.com/joshdick/onedark-fk.vim/)
+" [onedark_fk.vim](https://github.com/joshdick/onedark_fk.vim/)
 
-let s:overrides = get(g:, "onedark-fk_color_overrides", {})
+let s:overrides = get(g:, "onedark_fk_color_overrides", {})
 
 let s:colors = {
       \ "red": get(s:overrides, "red", { "gui": "<%=red.gui%>", "cterm": "<%=red.cterm%>", "cterm16": "<%=red.cterm16%>" }),
@@ -24,6 +24,6 @@ let s:colors = {
       \ "vertsplit": get(s:overrides, "vertsplit", { "gui": "<%=vertsplit.gui%>", "cterm": "<%=vertsplit.cterm%>", "cterm16": "<%=vertsplit.cterm16%>" }),
       \}
 
-function! onedark-fk#GetColors()
+function! onedark_fk#GetColors()
   return s:colors
 endfunction

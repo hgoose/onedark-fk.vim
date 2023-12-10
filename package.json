@@ -1,7 +1,7 @@
 {
-  "name": "onedark-fk.vim-builder",
+  "name": "onedark_fk.vim-builder",
   "version": "1.0.0",
-  "description": "Builds the onedark-fk.vim Vim colorscheme and associated files",
+  "description": "Builds the onedark_fk.vim Vim colorscheme and associated files",
   "main": "build.js",
   "scripts": {
     "build": "node build/build.js",
@@ -22,7 +22,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joshdick/onedark-fk.vim.git"
+    "url": "https://github.com/joshdick/onedark_fk.vim.git"
   },
   "devDependencies": {
     "eslint": "^8.18.0",

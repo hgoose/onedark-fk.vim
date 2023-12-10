@@ -1,20 +1,20 @@
-![onedark-fk.vim](https://raw.githubusercontent.com/joshdick/onedark-fk.vim/main/img/readme_header.png)
+![onedark_fk.vim](https://raw.githubusercontent.com/joshdick/onedark_fk.vim/main/img/readme_header.png)
 
 A dark Vim/Neovim color scheme for the GUI and 16/256/true-color terminals, based on [FlatColor](https://github.com/MaxSt/FlatColor), with colors inspired by the excellent [One Dark syntax theme](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) for the [Atom text editor](https://atom.io).
 
 ## Color Reference
 
-![Color Reference](https://raw.githubusercontent.com/joshdick/onedark-fk.vim/main/img/color_reference.png)
+![Color Reference](https://raw.githubusercontent.com/joshdick/onedark_fk.vim/main/img/color_reference.png)
 
 ## Breaking Changes
 
-[Pull request #271](https://github.com/joshdick/onedark-fk.vim/pull/271), merged July 11, 2021, contained several breaking changes, especially for 16-color users.
+[Pull request #271](https://github.com/joshdick/onedark_fk.vim/pull/271), merged July 11, 2021, contained several breaking changes, especially for 16-color users.
 
-If you are an existing onedark-fk.vim user that is suddenly having issues after this PR was merged, see the [PR description](https://github.com/joshdick/onedark-fk.vim/pull/271) for details.
+If you are an existing onedark_fk.vim user that is suddenly having issues after this PR was merged, see the [PR description](https://github.com/joshdick/onedark_fk.vim/pull/271) for details.
 
 ## Supported Plugins
 
-onedark-fk.vim includes support for the following Vim and Neovim plugins:
+onedark_fk.vim includes support for the following Vim and Neovim plugins:
 
 - [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - [dense-analysis/ale](https://github.com/dense-analysis/ale)
@@ -32,9 +32,9 @@ onedark-fk.vim includes support for the following Vim and Neovim plugins:
 
 ## Installation
 
-1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark-fk.vim` in your `~/.vim/colors/` directory and `autoload/onedark-fk.vim` in your `~/.vim/autoload/` directory.)
+1. Install the theme using your Vim plug-in manager of choice (or manually, by placing `colors/onedark_fk.vim` in your `~/.vim/colors/` directory and `autoload/onedark_fk.vim` in your `~/.vim/autoload/` directory.)
 
-   The theme also supports being installed as a Vim 8 package. Simply clone this repository into `~/.vim/pack/*/opt/` (so that the local path to this README would end up being `~/.vim/pack/*/opt/onedark-fk.vim/README.md`) and add `packadd! onedark-fk.vim` to your `~/.vimrc`. (The `*` in the path can be any value; see `:help packages` for more information.)
+   The theme also supports being installed as a Vim 8 package. Simply clone this repository into `~/.vim/pack/*/opt/` (so that the local path to this README would end up being `~/.vim/pack/*/opt/onedark_fk.vim/README.md`) and add `packadd! onedark_fk.vim` to your `~/.vimrc`. (The `*` in the path can be any value; see `:help packages` for more information.)
 
 2. If you use Vim in a terminal, do the following to test whether your terminal emulator supports [24-bit/"true" color](https://gist.github.com/XVilka/8346728), then add relevant `~/.vimrc` configuration if so:
 
@@ -46,7 +46,7 @@ onedark-fk.vim includes support for the following Vim and Neovim plugins:
    printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
    ```
 
-   If your terminal emulator **does NOT display the word `TRUECOLOR` in red**, it does not support 24-bit color. If you don't want to switch to a different terminal emulator that [supports 24-bit color](https://gist.github.com/XVilka/8346728), **proceed to step 3**. (After installation, the [`g:onedark-fk_termcolors` option](#options) may interest you.)
+   If your terminal emulator **does NOT display the word `TRUECOLOR` in red**, it does not support 24-bit color. If you don't want to switch to a different terminal emulator that [supports 24-bit color](https://gist.github.com/XVilka/8346728), **proceed to step 3**. (After installation, the [`g:onedark_fk_termcolors` option](#options) may interest you.)
 
    If your terminal emulator displays the word `TRUECOLOR` **in red**, it supports 24-bit color, and you should add the following lines to your `~/.vimrc` to enable 24-bit color terminal support inside Vim.
 
@@ -74,71 +74,71 @@ onedark-fk.vim includes support for the following Vim and Neovim plugins:
 
    ```vim
    syntax on
-   colorscheme onedark-fk
+   colorscheme onedark_fk
    ```
 
 4. Installing the [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) plug-in is recommended for improved syntax highlighting for various languages, but is not required.
 
 ## Options
 
-**Note:** All options should be set **before** the `colorscheme onedark-fk` line in your `~/.vimrc`.
+**Note:** All options should be set **before** the `colorscheme onedark_fk` line in your `~/.vimrc`.
 
-- `g:onedark-fk_hide_endofbuffer`: Set to `1` if you want to hide end-of-buffer filler lines (~) for a cleaner look; `0` otherwise (the default).
+- `g:onedark_fk_hide_endofbuffer`: Set to `1` if you want to hide end-of-buffer filler lines (~) for a cleaner look; `0` otherwise (the default).
 
-- `g:onedark-fk_termcolors` **(see [Troubleshooting](#troubleshooting) (below) for more information about this option)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native 16 colors.
+- `g:onedark_fk_termcolors` **(see [Troubleshooting](#troubleshooting) (below) for more information about this option)**: Set to `256` for 256-color terminals (the default), or set to `16` to use your terminal emulator's native 16 colors.
 
-- `g:onedark-fk_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
+- `g:onedark_fk_terminal_italics`: Set to `1` if your terminal emulator supports italics; `0` otherwise (the default).
 
 ## lightline.vim Colorscheme
 
-![lightline-onedark-fk.vim Preview](https://raw.github.com/joshdick/onedark-fk.vim/main/img/preview_lightline.png)
+![lightline-onedark_fk.vim Preview](https://raw.github.com/joshdick/onedark_fk.vim/main/img/preview_lightline.png)
 
-This repository includes a companion [lightline.vim](https://github.com/itchyny/lightline.vim) colorscheme for use with onedark-fk.vim.
+This repository includes a companion [lightline.vim](https://github.com/itchyny/lightline.vim) colorscheme for use with onedark_fk.vim.
 
 The lightline.vim colorscheme:
 
-- Depends on `autoload/onedark-fk.vim` for its colors, and must therefore be used in conjunction with it.
-- Works with both color modes available in onedark-fk.vim (16 or 256 colors), as specified in the configuration for onedark-fk.vim.
+- Depends on `autoload/onedark_fk.vim` for its colors, and must therefore be used in conjunction with it.
+- Works with both color modes available in onedark_fk.vim (16 or 256 colors), as specified in the configuration for onedark_fk.vim.
 
 ### Installation
 
-(These instructions assume that lightline.vim and onedark-fk.vim are already installed and configured to your liking.)
+(These instructions assume that lightline.vim and onedark_fk.vim are already installed and configured to your liking.)
 
-Place `onedark-fk.vim/autoload/lightline/colorscheme/onedark-fk.vim` in your `~/.vim/autoload/lightline/colorscheme/` directory either manually or by using your Vim plug-in manager of choice, then add the following lines to your `~/.vimrc` (or merge them into your existing lightline.vim configuration):
+Place `onedark_fk.vim/autoload/lightline/colorscheme/onedark_fk.vim` in your `~/.vim/autoload/lightline/colorscheme/` directory either manually or by using your Vim plug-in manager of choice, then add the following lines to your `~/.vimrc` (or merge them into your existing lightline.vim configuration):
 
 ```vim
 let g:lightline = {
-  \ 'colorscheme': 'onedark-fk',
+  \ 'colorscheme': 'onedark_fk',
   \ }
 ```
 
 ## vim-airline Theme
 
-![airline-onedark-fk.vim Preview](https://raw.github.com/joshdick/onedark-fk.vim/main/img/preview_airline.png)
+![airline-onedark_fk.vim Preview](https://raw.github.com/joshdick/onedark_fk.vim/main/img/preview_airline.png)
 
-This repository includes a companion [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with onedark-fk.vim.
+This repository includes a companion [vim-airline](https://github.com/vim-airline/vim-airline) theme for use with onedark_fk.vim.
 
 The vim-airline theme:
 
-- Depends on `autoload/onedark-fk.vim` for its colors, and must therefore be used in conjunction with it.
-- Works with both color modes available in onedark-fk.vim (16 or 256 colors), as specified in the configuration for onedark-fk.vim.
+- Depends on `autoload/onedark_fk.vim` for its colors, and must therefore be used in conjunction with it.
+- Works with both color modes available in onedark_fk.vim (16 or 256 colors), as specified in the configuration for onedark_fk.vim.
 - Is based on vim-airline's ["tomorrow" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/tomorrow.vim).
 
 ### Installation
 
-(These instructions assume that vim-airline and onedark-fk.vim are already installed and configured to your liking.)
+(These instructions assume that vim-airline and onedark_fk.vim are already installed and configured to your liking.)
 
-Place `onedark-fk.vim/autoload/airline/themes/onedark-fk.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
+Place `onedark_fk.vim/autoload/airline/themes/onedark_fk.vim` in your `~/.vim/autoload/airline/themes/` directory either manually or by using your Vim plug-in manager of choice, then add the following line to your `~/.vimrc`:
 
 ```vim
-let g:airline_theme='onedark-fk'
+let g:airline_theme='onedark_fk'
 ```
 
 ## Troubleshooting
 
 ### Why do the colors in terminal Vim look totally crazy?
 
-![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark-fk.vim/main/img/broken_colors.png)
+![Broken Colors](https://raw.githubusercontent.com/joshdick/onedark_fk.vim/main/img/broken_colors.png)
 
 If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit color terminal support, but your terminal doesn't support 24 bit color. Remove the relevant `~/.vimrc` configuration for enabling 24-bit color support to get things looking better.
 
@@ -146,78 +146,78 @@ If Vim looks similar to the screenshot above, you have enabled Vim's 24-bit colo
 
 If your terminal doesn't support 24-bit color as described in the [Installation](#installation) section of this README, or 24-bit color support is not always available everywhere you use your Vim configuration, colors will not look like they do in the preview image.
 
-However, you can use the `g:onedark-fk_termcolors` option to control onedark-fk.vim's fallback colors in situations where 24-bit color terminal support is not available.
+However, you can use the `g:onedark_fk_termcolors` option to control onedark_fk.vim's fallback colors in situations where 24-bit color terminal support is not available.
 
-`g:onedark-fk_termcolors` can be set to one of two values, `256` for 256-color mode (the default), or `16` for 16-color mode (which uses your terminal emulator's native 16 colors.)
+`g:onedark_fk_termcolors` can be set to one of two values, `256` for 256-color mode (the default), or `16` for 16-color mode (which uses your terminal emulator's native 16 colors.)
 
-**When Vim/Neovim are configured to use 24-bit color, the `g:onedark-fk_termcolors` option is ignored. However, `g:onedark-fk_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark-fk_termcolors` option will take effect.
+**When Vim/Neovim are configured to use 24-bit color, the `g:onedark_fk_termcolors` option is ignored. However, `g:onedark_fk_termcolors` can still coexist with 24-bit color configuration.** For instance, when tmux 2.1 or earlier and/or older Vim/Neovim versions that don't support 24-bit color are used, the `g:onedark_fk_termcolors` option will take effect.
 
 - **256-color mode** is enabled by default with no additional configuration, but colors are less accurate since they are approximated using a 256-color palette. The background color will appear darker than in the preview image, and most other colors will appear brighter than in the preview image. If you don't want to change your terminal's color palette as described in the 16-color mode section below, and your terminal doesn't support 24-bit color, 256-color mode is your only option.
 
   Although 256-color mode is enabled by default (when not using 24-bit color as described above), you can explicitly enable it by adding the following line to your `~/.vimrc`:
 
   ```vim
-  let g:onedark-fk_termcolors=256
+  let g:onedark_fk_termcolors=256
   ```
 
-- **16-color mode** is the preferred option, since its colors are more accurate than those of 256-color mode. However, you'll need to set your terminal emulator's color palette to this color scheme's custom 16-color palette, since 16-color mode will cause the color scheme to use your terminal emulator's native 16 colors. If you don't use the custom 16-color palette in your terminal emulator when 16-color mode is enabled, onedark-fk.vim's colors will not display correctly in Vim.
+- **16-color mode** is the preferred option, since its colors are more accurate than those of 256-color mode. However, you'll need to set your terminal emulator's color palette to this color scheme's custom 16-color palette, since 16-color mode will cause the color scheme to use your terminal emulator's native 16 colors. If you don't use the custom 16-color palette in your terminal emulator when 16-color mode is enabled, onedark_fk.vim's colors will not display correctly in Vim.
 
   The canonical version of the 16-color palette is an [Xresources](https://en.wikipedia.org/wiki/X_resources) file located in this repository at `term/One Dark.Xresources`. Color schemes for various terminal emulators are also provided in `term/`. (The [iTerm2](https://iterm2.com/) color scheme works with iTerm2 versions 2.9.x and later.) You should be able to easily convert the Xresources color scheme for use with your terminal emulator of choice either by hand, or automatically by using [termcolors](https://github.com/stayradiated/termcolors).
 
   Assuming your terminal emulator is configured to use the custom 16-color palette as described above, add the following line to your `~/.vimrc` to enable 16-color mode:
 
   ```vim
-  let g:onedark-fk_termcolors=16
+  let g:onedark_fk_termcolors=16
   ```
 
 ### Why do all comments look like they're highlighted?
 
-![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark-fk.vim/main/img/broken_italics.png)
+![Broken Italics](https://raw.githubusercontent.com/joshdick/onedark_fk.vim/main/img/broken_italics.png)
 
-If all comments look like the one in the screenshot above, you have enabled italics in onedark-fk.vim by setting `g:onedark-fk_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the option or [try to fix your terminal](https://github.com/joshdick/onedark-fk.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
+If all comments look like the one in the screenshot above, you have enabled italics in onedark_fk.vim by setting `g:onedark_fk_terminal_italics=1` in your `~/.vimrc`, but your terminal isn't displaying italics correctly. You can either remove the option or [try to fix your terminal](https://github.com/joshdick/onedark_fk.vim/issues/97#issuecomment-299719352). If you're using [iTerm2](http://iterm2.com) on macOS, you might need to [use a special TERMINFO](https://gist.github.com/sos4nt/3187620) to get italics working.
 
 ### Why do colors look washed out when using [iTerm2](https://www.iterm2.com)?
 
-Make sure that in Preferences, Profiles -> [Active Profile] -> Colors -> Minimum Contrast is turned all the way down. See [#145](https://github.com/joshdick/onedark-fk.vim/issues/145) for more information.
+Make sure that in Preferences, Profiles -> [Active Profile] -> Colors -> Minimum Contrast is turned all the way down. See [#145](https://github.com/joshdick/onedark_fk.vim/issues/145) for more information.
 
 ## Miscellaneous
 
-### Customizing onedark-fk.vim's look without forking the repository
+### Customizing onedark_fk.vim's look without forking the repository
 
-onedark-fk.vim exposes `onedark-fk#extend_highlight` and `onedark-fk#set_highlight` functions that you can call from within your `~/.vimrc` in order to customize the look of onedark-fk.vim.
+onedark_fk.vim exposes `onedark_fk#extend_highlight` and `onedark_fk#set_highlight` functions that you can call from within your `~/.vimrc` in order to customize the look of onedark_fk.vim.
 
-#### `onedark-fk#extend_highlight`
+#### `onedark_fk#extend_highlight`
 
-`onedark-fk#extend_highlight` allows you to customize individual aspects of onedark-fk.vim's existing highlight groups, overriding only the keys you provide. (To completely redefine/override an existing highlight group, see `onedark-fk#set_highlight` below.)
+`onedark_fk#extend_highlight` allows you to customize individual aspects of onedark_fk.vim's existing highlight groups, overriding only the keys you provide. (To completely redefine/override an existing highlight group, see `onedark_fk#set_highlight` below.)
 
-`onedark-fk#extend_highlight`'s first argument should be the name of a highlight group, and its second argument should be **partial** style data.
+`onedark_fk#extend_highlight`'s first argument should be the name of a highlight group, and its second argument should be **partial** style data.
 
-Place the following lines **before** the `colorscheme onedark-fk` line in your `~/.vimrc`, then change the example overrides to suit your needs:
+Place the following lines **before** the `colorscheme onedark_fk` line in your `~/.vimrc`, then change the example overrides to suit your needs:
 
 ```vim
 if (has("autocmd"))
   augroup colorextend
     autocmd!
     " Make `Function`s bold in GUI mode
-    autocmd ColorScheme * call onedark-fk#extend_highlight("Function", { "gui": "bold" })
+    autocmd ColorScheme * call onedark_fk#extend_highlight("Function", { "gui": "bold" })
     " Override the `Statement` foreground color in 256-color mode
-    autocmd ColorScheme * call onedark-fk#extend_highlight("Statement", { "fg": { "cterm": 128 } })
+    autocmd ColorScheme * call onedark_fk#extend_highlight("Statement", { "fg": { "cterm": 128 } })
     " Override the `Identifier` background color in GUI mode
-    autocmd ColorScheme * call onedark-fk#extend_highlight("Identifier", { "bg": { "gui": "#333333" } })
+    autocmd ColorScheme * call onedark_fk#extend_highlight("Identifier", { "bg": { "gui": "#333333" } })
   augroup END
 endif
 ```
 
-#### `onedark-fk#set_highlight`
+#### `onedark_fk#set_highlight`
 
-`onedark-fk#set_highlight` allows you to completely redefine/override highlight groups of your choosing.
+`onedark_fk#set_highlight` allows you to completely redefine/override highlight groups of your choosing.
 
-`onedark-fk#set_highlight`'s first argument should be the name of a highlight group, and its second argument should be **complete** style data.
+`onedark_fk#set_highlight`'s first argument should be the name of a highlight group, and its second argument should be **complete** style data.
 
-For example, to remove the background color only when running in terminals (outside GUI mode and for use in transparent terminals,) place the following lines **before** the `colorscheme onedark-fk` line in your `~/.vimrc`:
+For example, to remove the background color only when running in terminals (outside GUI mode and for use in transparent terminals,) place the following lines **before** the `colorscheme onedark_fk` line in your `~/.vimrc`:
 
 ```vim
-" onedark-fk.vim override: Don't set a background color when running in a terminal;
+" onedark_fk.vim override: Don't set a background color when running in a terminal;
 " just use the terminal's background color
 " `gui` is the hex color code used in GUI mode/nvim true-color mode
 " `cterm` is the color code used in 256-color mode
@@ -226,47 +226,47 @@ if (has("autocmd") && !has("gui_running"))
   augroup colorset
     autocmd!
     let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-    autocmd ColorScheme * call onedark-fk#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+    autocmd ColorScheme * call onedark_fk#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
   augroup END
 endif
 ```
 
 #### Global color overrides
 
-You can override colors across all highlights by adding color definitions to the `g:onedark-fk_color_overrides` dictionary in your `~/.vimrc` like so:
+You can override colors across all highlights by adding color definitions to the `g:onedark_fk_color_overrides` dictionary in your `~/.vimrc` like so:
 
 ```vim
-let g:onedark-fk_color_overrides = {
+let g:onedark_fk_color_overrides = {
 \ "background": {"gui": "#2F343F", "cterm": "235", "cterm16": "0" },
 \ "purple": { "gui": "#C678DF", "cterm": "170", "cterm16": "5" }
 \}
 ```
 
-This also needs to be done **before** `colorscheme onedark-fk`.
+This also needs to be done **before** `colorscheme onedark_fk`.
 
-More examples of highlight group names and style data can be found in onedark-fk.vim's source code (`colors/onedark-fk.vim` inside this repository).
+More examples of highlight group names and style data can be found in onedark_fk.vim's source code (`colors/onedark_fk.vim` inside this repository).
 
 ### tmux theme
 
-If you'd like a tmux theme that complements onedark-fk.vim, [@odedlaz has you covered](https://github.com/odedlaz/tmux-onedark-fk-theme).
+If you'd like a tmux theme that complements onedark_fk.vim, [@odedlaz has you covered](https://github.com/odedlaz/tmux-onedark_fk-theme).
 
 ### Contributing
 
-If you'd like to contribute to onedark-fk.vim, check out the [contribution guidelines](./CONTRIBUTING.md).
+If you'd like to contribute to onedark_fk.vim, check out the [contribution guidelines](./CONTRIBUTING.md).
 
-### Relatives of onedark-fk.vim
+### Relatives of onedark_fk.vim
 
 Several other themes and projects have reused code and/or colors from this project, or were otherwise inspired by it.
 
-If onedark-fk.vim isn't meeting your needs, try one of its relatives!
+If onedark_fk.vim isn't meeting your needs, try one of its relatives!
 
 - [drewtempelmeyer/palenight.vim](https://github.com/drewtempelmeyer/palenight.vim)
 - [KeitaNakamura/neodark.vim](https://github.com/KeitaNakamura/neodark.vim)
-- [base16-onedark-fk.vim](https://github.com/chriskempson/base16-vim/blob/master/colors/base16-onedark-fk.vim)
-  - Associated base16 scheme: [tilal6991/base16-onedark-fk-scheme](https://github.com/tilal6991/base16-onedark-fk-scheme)
+- [base16-onedark_fk.vim](https://github.com/chriskempson/base16-vim/blob/master/colors/base16-onedark_fk.vim)
+  - Associated base16 scheme: [tilal6991/base16-onedark_fk-scheme](https://github.com/tilal6991/base16-onedark_fk-scheme)
 - [rakr/vim-one](https://github.com/rakr/vim-one)
-- For Neovim >= 0.5 with treesitter support: [navarasu/onedark-fk.nvim](https://github.com/navarasu/onedark-fk.nvim) or [monsonjeremy/onedark-fk.nvim](https://github.com/monsonjeremy/onedark-fk.nvim)
-- Neovim-only Lua port: [ii14/onedark-fk.nvim](https://github.com/ii14/onedark-fk.nvim)
+- For Neovim >= 0.5 with treesitter support: [navarasu/onedark_fk.nvim](https://github.com/navarasu/onedark_fk.nvim) or [monsonjeremy/onedark_fk.nvim](https://github.com/monsonjeremy/onedark_fk.nvim)
+- Neovim-only Lua port: [ii14/onedark_fk.nvim](https://github.com/ii14/onedark_fk.nvim)
 
 ### Preview images
 
